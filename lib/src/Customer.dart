@@ -18,8 +18,16 @@ part of model;
   
   final List<FinancialYear> _financialYears = new List();
   
-  operator + (FinancialYear year) => this._financialYears.add(year);
-  operator - (FinancialYear year) => this._financialYears.remove(year);
+  
+  operator + (FinancialYear year) {
+    this._financialYears.add(year);
+    year.plan = this;
+  }
+  
+  operator - (FinancialYear year) {
+    this._financialYears.remove(year);
+    year.plan = null;
+  }
   
   
   
@@ -29,6 +37,7 @@ part of model;
   
   num currentBalance;
   List<Asset> assetsBroughtThisYear = new List();
+  FinancePlan plan;
   
 }
 
