@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>FinancialChartBar</title>
-  </head>
- 
-  <body>   
-    <p id="text"></p>
-    <script type="application/dart" src="FinancialChartBar.dart"></script>
-    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
-    <script src="packages/browser/dart.js"></script>
-  </body>
-</html>
+<polymer-element name="financial-chart-bar">
+  <template>
+     <link href="/CreditDemo/asset/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/CreditDemo/asset/css/creditdemo.css" rel="stylesheet">
+     <div class="chart-bar-container">
+        <div class="chart-bar" style="width: {{width}}%; height: {{height%}}"></div>     
+    </div>
+  </template>
+  <script type="application/dart" src="FinancialChartBar.dart"></script>
+</polymer-element>

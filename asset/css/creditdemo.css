@@ -1,0 +1,10 @@
+.chart-bar-container {
+  padding-left: 2px;
+  padding-right: 2px;
+  min-height: 100px;
+  background-color: gray;
+}
+
+.chart-bar {
+  background-color: aqua;  
+}

@@ -58,12 +58,16 @@
     <!-- import the click-counter -->
     <link rel="import" href="components/navigation/Navigation.html">
     <link rel="import" href="components/user/UserForm.html">
+    <link rel="import" href="components/chart/FinancialChartBar.html">
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body>
     <navigation-element></navigation-element>
     <user-form></user-form>
+    <div style="max-height: 200px">
+      <financial-chart-bar></financial-chart-bar>
+    </div>
     <footer>
         <p>&copy; Philipp Klose ;)</p>
     </footer>

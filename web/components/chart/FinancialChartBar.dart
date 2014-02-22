@@ -7,6 +7,10 @@ class ChartBar extends PolymerElement {
   
   @published FinancialYear financialYear;
   
+  @published num height = 100;
+  
+  @published num width = 100;
+  
   ChartBar.created() : super.created() {
      
   }
