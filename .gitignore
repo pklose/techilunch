@@ -1,0 +1,15 @@
+
+.buildlog
+
+packages/*
+
+
+pubspec.lock
+
+web/components/chart/packages
+
+web/components/navigation/packages
+
+web/components/packages
+
+web/packages
