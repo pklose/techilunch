@@ -1,9 +1,9 @@
 <polymer-element name="financial-chart-bar">
   <template>
-     <link href="/CreditDemo/asset/css/bootstrap.min.css" rel="stylesheet">
-     <link href="/CreditDemo/asset/css/creditdemo.css" rel="stylesheet">
+     <link href="/creditdemo/asset/css/bootstrap.css" rel="stylesheet">
+     <link href="/creditdemo/asset/css/creditdemo.css" rel="stylesheet">
      <div class="chart-bar-container">
-        <div class="chart-bar" style="width: {{width}}%; height: {{height%}}"></div>     
+        <div class="chart-bar" style="{{styles | styleObject}}" ></div>     
     </div>
   </template>
   <script type="application/dart" src="FinancialChartBar.dart"></script>

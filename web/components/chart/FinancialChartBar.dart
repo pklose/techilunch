@@ -1,3 +1,5 @@
+library components.chartbar;
+
 import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:creditdemo/model.dart';
@@ -7,12 +9,12 @@ class ChartBar extends PolymerElement {
   
   @published FinancialYear financialYear;
   
-  @published num height = 100;
-  
-  @published num width = 100;
+  @observable var styleObject = {'height' : '80%', 'width' : '90%'};
   
   ChartBar.created() : super.created() {
-     
+      
   }
+  
+  
   
 }
