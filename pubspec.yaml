@@ -1,0 +1,8 @@
+name: creditdemo
+description: A sample Polymer application
+dependencies:
+    polymer: "0.9.5"
+    browser: any
+transformers:
+- polymer:
+    entry_points: web/creditdemo.html
