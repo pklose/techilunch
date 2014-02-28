@@ -29,6 +29,10 @@ part of model;
     year.plan = null;
   }
   
+  List<FinancialYear> get financialYears {
+    return this._financialYears;
+  }
+  
   
   
 }

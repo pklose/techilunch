@@ -5,15 +5,19 @@ import 'package:polymer/polymer.dart';
 import 'package:creditdemo/model.dart';
 
 @CustomTag('financial-chart-bar')
-class ChartBar extends PolymerElement {
+class ChartBar extends DivElement with Polymer, Observable {
   
   @published FinancialYear financialYear;
   
-  @observable var styleObject = {'height' : '80%', 'width' : '90%'};
-  
   ChartBar.created() : super.created() {
-      
+    
   }
+  
+  void enteredView () {
+    shadowRoot.querySelector("#chart").style.minHeight = "50%";
+  }
+  
+  
   
   
   

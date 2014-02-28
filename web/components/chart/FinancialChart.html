@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>FinancialChart</title>
-  </head>
+ <link rel="import" href="FinancialChartBar.html">
  
-  <body>   
-    <p id="text"></p>
-    <script type="application/dart" src="FinancialChart.dart"></script>
-    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
-    <script src="packages/browser/dart.js"></script>
-  </body>
-</html>
+<polymer-element name="financial-chart" attributes="financialPlan" extends="div">
+  <template>
+     <link href="/creditdemo/asset/css/bootstrap.css" rel="stylesheet">
+     <link href="/creditdemo/asset/css/creditdemo.css" rel="stylesheet">
+    
+     
+     
+     <template repeat="{{financialYear in financialPlan.financialYears}}">
+         Ohne Template {{financialYear}}
+         <div is="financial-chart-bar" financialYear="{{financialYear}}" style="min-height: 100%"> </div>
+    </template>
+   </template>
+  <script type="application/dart" src="FinancialChart.dart"></script>
+</polymer-element>
+
