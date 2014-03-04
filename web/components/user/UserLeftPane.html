@@ -1,0 +1,40 @@
+<polymer-element name="user-left-pane" attributes="selected" extends="div"> 
+  <template>
+    <link href="/creditdemo/asset/css/bootstrap.css" rel="stylesheet">
+      <div class="user-short-info-container">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="list-group">
+              <template if="{{selected}}">
+                <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">{{customer.name}} {{customer.surename}}</h4>
+                  <p class="list-group-item-text">
+                    {{customer.adress.street}}
+                  </p>
+                  <p class="list-group-item-text">
+                    {{customer.adress.postal}} {{customer.adress.city}}
+                  </p>
+                </a>
+              </template>
+              
+              <template if="{{!selected}}">
+                <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">{{customer.name}} {{customer.surename}}</h4>
+                  <p class="list-group-item-text">
+                    {{customer.adress.street}}
+                  </p>
+                  <p class="list-group-item-text">
+                    {{customer.adress.postal}} {{customer.adress.city}}
+                  </p>
+                </a>
+              </template>              
+                  
+              </div>             
+            </div>
+          </div>
+        </div>
+      </div>
+  </template> 
+  <script type="application/dart" src="UserLeftPane.dart"> </script>
+</polymer-element>

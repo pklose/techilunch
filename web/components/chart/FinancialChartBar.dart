@@ -17,8 +17,4 @@ class ChartBar extends DivElement with Polymer, Observable {
     shadowRoot.querySelector("#chart").style.minHeight = "50%";
   }
   
-  
-  
-  
-  
 }

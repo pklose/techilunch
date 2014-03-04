@@ -1,19 +1,5 @@
 part of model;
 
-@observable class Customer {
-  
-  String name;
-  String surename;
-  Adress adress;
-  String email;
-  Income income;
-  
-  Customer ();
-  Customer.Basic (this.name,this.surename,this.email);
-  
-  
-}
-
 @observable class FinancePlan {
   
   final List<FinancialYear> _financialYears = new List();
@@ -33,6 +19,19 @@ part of model;
     return this._financialYears;
   }
   
+}
+
+@observable class Customer {
+  
+  String name;
+  String surename;
+  Adress adress;
+  String email;
+  Income income;
+  
+  Customer ();
+  Customer.Basic (this.name,this.surename,this.email);
+  Customer.Complete(this.name,this.surename,this.email,this.income,this.adress);
   
   
 }
@@ -60,6 +59,10 @@ class Income {
   
 }
 
-class Adress {
+@published class Adress {
+  String street;
+  int postal;
+  String city;
   
+  Adress (this.street, this.postal, this.city);
 }

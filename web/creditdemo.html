@@ -57,7 +57,7 @@
     </style>
     <!-- import the click-counter -->
     <link rel="import" href="components/navigation/Navigation.html">
-    <link rel="import" href="components/user/UserForm.html">
+    <link rel="import" href="components/user/UserLeftPane.html">
     <link rel="import" href="components/chart/FinancialChart.html">
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
@@ -66,9 +66,10 @@
     <navigation-element></navigation-element>
     <div class="container-fluid">
       <div class="row" style="height: 400px">
-        <div class="col-xs-6 col-md-4" style="min-height: 100%">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-12 col-md-8" style="min-height: 100%"> 
-         <div is="financial-chart" style="min-height: 100%"></div>
+        <div class="col-xs-10 col-md-4" style="min-height: 100%">
+          <div is="user-left-pane" selected="false"></div>
+        </div>
+        <div class="col-xs-12 col-md-8" style="min-height: 100%">         
         </div>       
       </div>     
     </div>   
