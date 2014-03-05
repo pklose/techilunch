@@ -5,19 +5,19 @@
         <div class="form-group">
           <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" value="{{customer.email}}">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" value="{{internalCustomer.email}}">
           </div>
         </div>
         <div class="form-group">
           <label for="name" class="col-sm-2 control-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" placeholder="Name" value="{{customer.name}}">
+            <input type="text" class="form-control" id="name" placeholder="Name" value="{{internalCustomer.name}}">
           </div>
         </div>
         <div class="form-group">
           <label for="surename" class="col-sm-2 control-label">Surename</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="surename" placeholder="Surename" value="{{customer.surename}}">
+            <input type="text" class="form-control" id="surename" placeholder="Surename" value="{{internalCustomer.surename}}">
           </div>
         </div>
         <div class="form-group">
@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <input id="save-button" type="submit" class="btn btn-default" value="Save">
+            <input id="save-button" class="btn btn-default" value="Save" on-click="{{save}}">
           </div>
         </div>
       </form>

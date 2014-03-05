@@ -7,10 +7,30 @@ import 'package:creditdemo/model.dart';
 @CustomTag("user-form")
 class UserForm extends PolymerElement {
   
-  @published Customer customer;
+  static const String USER_ADDED = "user-added";
+  
+  Customer _customer;
+  
+  @published Customer internalCustomer;
   
   UserForm.created() : super.created() {
-    customer = new Customer.Basic("hallo","hallo","hallo");
+     customer = new Customer();
   }
+  
+  @published set customer (Customer customer) {
+    internalCustomer = new Customer.Copy(customer);
+    _customer = customer;
+  }
+  
+  @published Customer get customer  => this._customer;
+    
+  
+  
+  void save () {
+    customer.email = internalCustomer.email;
+    customer.name = internalCustomer.name;
+    customer.surename = internalCustomer.surename;
+    dispatchEvent(new CustomEvent(USER_ADDED, canBubble: true, cancelable: true, detail: customer));
+  }  
   
 }

@@ -32,6 +32,13 @@ part of model;
   Customer ();
   Customer.Basic (this.name,this.surename,this.email);
   Customer.Complete(this.name,this.surename,this.email,this.income,this.adress);
+  Customer.Copy(Customer customer) {
+    name = customer.name;
+    surename = customer.surename;
+    adress = customer.adress;
+    email = customer.email;
+    income = customer.income;
+  }
   
   
 }

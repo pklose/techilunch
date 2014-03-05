@@ -1,15 +1,28 @@
- <link rel="import" href="UserLeftPane.html">
- 
-<polymer-element name="left-pane-container" attributes="financialPlan" extends="div">
-  <template>
-     <link href="/creditdemo/asset/css/bootstrap.css" rel="stylesheet">
-     <link href="/creditdemo/asset/css/creditdemo.css" rel="stylesheet">
-    
-     
-     
-     <template repeat="customer in customers}}">
-                       
-    </template>
-   </template>
-  <script type="application/dart" src="LeftPaneContainer.dart"></script>
+<link rel="import" href="UserLeftPane.html">
+<link rel="import" href="UserForm.html">
+<polymer-element name="left-pane-container" extends="div">
+<template>
+<link href="/creditdemo/asset/css/bootstrap.css" rel="stylesheet">
+<link href="/creditdemo/asset/css/creditdemo.css" rel="stylesheet">
+<div class="row">
+<div class="btn-group">
+      <button type="button" class="btn btn-default"
+        on-click="{{removeUser}}">Remove</button>
+      <button type="button" class="btn btn-default"
+        on-click="{{addUser}}">Add</button>
+    </div>
+    <hr>
+  <div class="col-xs-10 col-md-4">    
+    <div>
+      <template repeat="{{customer in customers}}">
+      <div is="user-left-pane" customer="{{customer}}"
+        on-click="{{selectListener}}"></div>
+      </template>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <user-form customer="{{currentCustomer}}" on-user-added="{{userAdded}}"></user-form>
+  </div>
+</div>
+</template> <script type="application/dart" src="LeftPaneContainer.dart"></script>
 </polymer-element>
