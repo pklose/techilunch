@@ -57,7 +57,7 @@
     </style>
     <!-- import the click-counter -->
     <link rel="import" href="components/navigation/Navigation.html">
-    <link rel="import" href="components/user/LeftPaneContainer.html">
+    <link rel="import" href="components/user/UsersEditor.html">
     <link rel="import" href="components/chart/FinancialChart.html">
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
@@ -65,13 +65,10 @@
   <body>
     <navigation-element></navigation-element>
     <div class="container-fluid">
-      <div class="row" style="height: 400px">
-        <div class="col-xs-10 col-md-4" style="min-height: 100%">
-          <div is="left-pane-container" ></div>
-        </div>
-        <div class="col-xs-12 col-md-8" style="min-height: 100%">         
-        </div>       
-      </div>     
+      
+      <div is="users-editor" ></div>
+        
+
     </div>   
     <footer>
         <p>&copy; Philipp Klose ;)</p>
