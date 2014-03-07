@@ -26,11 +26,21 @@
             <input type="text" class="form-control" id="adress" placeholder="Adresse" value="{{internalCustomer.adress.street}}">
           </div>
         </div>
+        <template if="{{editMode}}">
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <input id="save-button" class="btn btn-default" value="Save" on-click="{{save}}">
-          </div>
+            <input id="save-button" class="btn btn-default" value="Save Changes" on-click="{{save}}">
+          </div>        
         </div>
+        </template>
+        <template if="{{!editMode}}">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input id="save-button" class="btn btn-default" value="Add Customer" on-click="{{save}}">
+            <input id="cancel-button" class="btn btn-default" value="Cancel" on-click="{{cancel}}">
+          </div>        
+        </div>
+        </template>
       </form>
  </template>
   <script type="application/dart" src="UserForm.dart"> </script>

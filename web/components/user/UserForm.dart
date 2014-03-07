@@ -8,11 +8,16 @@ import 'package:creditdemo/model.dart';
 class UserForm extends PolymerElement {
   
   static const String USER_ADDED = "user-added";
+  static const String USER_EDIT = "user-edited";
+  static const String CANCEL = "cancel";
   
   Customer _customer;
   
   @published Customer internalCustomer;
   
+  @published bool editMode = true;
+  
+    
   UserForm.created() : super.created() {
      customer = new Customer();
   }
@@ -30,7 +35,14 @@ class UserForm extends PolymerElement {
     customer.email = internalCustomer.email;
     customer.name = internalCustomer.name;
     customer.surename = internalCustomer.surename;
-    dispatchEvent(new CustomEvent(USER_ADDED, canBubble: true, cancelable: true, detail: customer));
-  }  
+    if (!editMode)  {
+      dispatchEvent(new CustomEvent(USER_ADDED, canBubble: true, cancelable: true, detail: customer));
+    }
+  }
+  
+  void cancel () {
+    dispatchEvent(new CustomEvent(CANCEL));
+  }
+    
   
 }
